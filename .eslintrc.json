@@ -44,7 +44,8 @@
         "node_modules",
         "postcss.config.js",
         "tailwind.config.ts",
-        "prettier.config.js"
+        "prettier.config.js",
+        "components/ui"
     ],
     "rules": {
         "no-param-reassign": ["error", { "props": false }],
