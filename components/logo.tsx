@@ -11,13 +11,7 @@ const headingFont = localFont({
 const Logo = () => {
     return (
         <Link href="/">
-            <div
-                className={cn(
-                    'hidden',
-                    'hover:opacity-75 transition',
-                    'md:flex items-center gap-x-2 '
-                )}
-            >
+            <div className={cn('hidden', 'md:flex items-center gap-x-2 ')}>
                 <Image alt="Logo" height={30} src="/logo.svg" width={30} />
                 <p
                     className={cn(
