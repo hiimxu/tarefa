@@ -39,7 +39,7 @@ const MarketingPage: NextPage = () => {
                 </h1>
                 <div
                     className={cn(
-                        'text-3xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white p-2 px-4 pb-4 rounded-md w-fit',
+                        'text-3xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white p-3 px-4 pb-2 rounded-md w-fit',
                         'md:text-6xl'
                     )}
                 >
