@@ -40,7 +40,7 @@ const BoardList = async () => {
                 {boards.map((item) => (
                     <Link
                         className="group relative aspect-video bg-no-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
-                        href={`board/${item.id}`}
+                        href={`/board/${item.id}`}
                         key={item.id}
                         style={{
                             backgroundImage: `url(${item.imageThumbUrl})`,
