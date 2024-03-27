@@ -38,4 +38,4 @@ next-env.d.ts
 
 #lock file
 packagelock.json
-yarn.lock
+
