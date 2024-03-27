@@ -64,7 +64,7 @@ const BoardTitleForm = ({ data }: Props) => {
             >
                 <FormInput
                     className={cn(
-                        'text-lg font-bold px-[7px] py-1 h-7 bg-transparent border-none',
+                        'h-7 border-none bg-transparent px-[7px] py-1 text-lg font-bold',
                         'focus-visible:outline-none focus-visible:ring-transparent'
                     )}
                     defaultValue={title}
@@ -78,7 +78,7 @@ const BoardTitleForm = ({ data }: Props) => {
 
     return (
         <Button
-            className="font-bold text-lg h-auto w-auto p-1 px-2"
+            className="h-auto w-auto p-1 px-2 text-lg font-bold"
             onClick={enableEditing}
             variant="transparent"
         >

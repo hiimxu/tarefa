@@ -9,7 +9,7 @@ import MobileSidebar from './mobile-sidebar';
 
 const Navbar = () => {
     return (
-        <nav className="fixed z-50 top-0 w-full h-14 px-4 border-b shadow-sm bg-white flex items-center">
+        <nav className="fixed top-0 z-50 flex h-14 w-full items-center border-b bg-white px-4 shadow-sm">
             <MobileSidebar />
             <div className="flex items-center gap-x-4">
                 <div className={cn('hidden', 'md:flex')}>
@@ -18,7 +18,7 @@ const Navbar = () => {
                 <FormPopover align="start" side="bottom" sideOffset={18}>
                     <Button
                         className={cn(
-                            'rounded-sm hidden h-auto py-1.5 px-2',
+                            'hidden h-auto rounded-sm px-2 py-1.5',
                             'md:block'
                         )}
                         size="sm"
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </FormPopover>
                 <FormPopover>
                     <Button
-                        className={cn('rounded-sm block', 'md:hidden')}
+                        className={cn('block rounded-sm', 'md:hidden')}
                         size="sm"
                         variant="primary"
                     >

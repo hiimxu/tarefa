@@ -18,20 +18,20 @@ const headingFont = localFont({
 
 const MarketingPage: NextPage = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center">
             <div
                 className={cn(
                     'flex flex-col items-center justify-center',
                     headingFont.className
                 )}
             >
-                <div className="mb-4 flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
-                    <Medal className="h-6 w-6 mr-2" />
+                <div className="mb-4 flex items-center rounded-full border bg-amber-100 p-4 uppercase text-amber-700 shadow-sm">
+                    <Medal className="mr-2 h-6 w-6" />
                     No 1 task management
                 </div>
                 <h1
                     className={cn(
-                        'text-3xl text-center text-neutral-800 mb-6',
+                        'mb-6 text-center text-3xl text-neutral-800',
                         'md:text-6xl'
                     )}
                 >
@@ -39,7 +39,7 @@ const MarketingPage: NextPage = () => {
                 </h1>
                 <div
                     className={cn(
-                        'text-3xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white p-3 px-4 pb-2 rounded-md w-fit',
+                        'w-fit rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 p-3 px-4 pb-2 text-3xl text-white',
                         'md:text-6xl'
                     )}
                 >
@@ -48,8 +48,8 @@ const MarketingPage: NextPage = () => {
             </div>
             <div
                 className={cn(
-                    'text-sm text-neutral-400 mt-4 max-w-xs text-center mx-auto',
-                    'md:text-xl md:max-w-2xl',
+                    'mx-auto mt-4 max-w-xs text-center text-sm text-neutral-400',
+                    'md:max-w-2xl md:text-xl',
                     textFont.className
                 )}
             >

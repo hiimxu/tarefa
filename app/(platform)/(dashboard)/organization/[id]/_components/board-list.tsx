@@ -26,8 +26,8 @@ const BoardList = async () => {
 
     return (
         <div className="space-y-4">
-            <div className="flex items-center font-semibold text-lg text-neutral-700">
-                <User2 className="h-6 w-6 mr-2" />
+            <div className="flex items-center text-lg font-semibold text-neutral-700">
+                <User2 className="mr-2 h-6 w-6" />
                 Your boards
             </div>
             <div
@@ -39,14 +39,14 @@ const BoardList = async () => {
             >
                 {boards.map((item) => (
                     <Link
-                        className="group relative aspect-video bg-no-repeat bg-center bg-cover bg-sky-700 rounded-sm h-full w-full p-2 overflow-hidden"
+                        className="group relative aspect-video h-full w-full overflow-hidden rounded-sm bg-sky-700 bg-cover bg-center bg-no-repeat p-2"
                         href={`/board/${item.id}`}
                         key={item.id}
                         style={{
                             backgroundImage: `url(${item.imageThumbUrl})`,
                         }}
                     >
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
+                        <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/40" />
                         <p className="relative font-semibold text-white">
                             {item.title}
                         </p>
@@ -55,8 +55,8 @@ const BoardList = async () => {
                 <FormPopover side="right" sideOffset={10}>
                     <div
                         className={cn(
-                            'aspect-video relative h-full w-full bg-muted rounded-sm flex flex-col gap-y-1 items-center justify-center',
-                            'hover:opacity-75 transition'
+                            'relative flex aspect-video h-full w-full flex-col items-center justify-center gap-y-1 rounded-sm bg-muted',
+                            'transition hover:opacity-75'
                         )}
                         role="button"
                     >

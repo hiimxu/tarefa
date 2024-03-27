@@ -36,22 +36,22 @@ export const BoardOptions = ({ id }: Props) => {
             </PopoverTrigger>
             <PopoverContent
                 align="start"
-                className="px-0 pt-3 pb-3"
+                className="px-0 pb-3 pt-3"
                 side="bottom"
             >
-                <div className="text-sm font-medium text-center text-neutral-600 pb-4">
+                <div className="pb-4 text-center text-sm font-medium text-neutral-600">
                     Board action
                 </div>
                 <PopoverClose asChild>
                     <Button
-                        className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600"
+                        className="absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600"
                         variant="ghost"
                     >
                         <X className="h-4 w-4" />
                     </Button>
                 </PopoverClose>
                 <Button
-                    className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+                    className="h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal"
                     disabled={isLoading}
                     onClick={onDelete}
                     variant="ghost"

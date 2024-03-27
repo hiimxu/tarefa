@@ -33,22 +33,22 @@ const NavItem: React.FC<Props> = ({
     const routes = [
         {
             label: 'Boards',
-            icon: <Layout className="h-4 w-4 mr-2" />,
+            icon: <Layout className="mr-2 h-4 w-4" />,
             href: `/organization/${organization.id}`,
         },
         {
             label: 'Activity',
-            icon: <Activity className="h-4 w-4 mr-2" />,
+            icon: <Activity className="mr-2 h-4 w-4" />,
             href: `/organization/${organization.id}/activity`,
         },
         {
             label: 'Settings',
-            icon: <Settings className="h-4 w-4 mr-2" />,
+            icon: <Settings className="mr-2 h-4 w-4" />,
             href: `/organization/${organization.id}/settings`,
         },
         {
             label: 'Billing',
-            icon: <CreditCard className="h-4 w-4 mr-2" />,
+            icon: <CreditCard className="mr-2 h-4 w-4" />,
             href: `/organization/${organization.id}/billing`,
         },
     ];
@@ -61,14 +61,14 @@ const NavItem: React.FC<Props> = ({
         <AccordionItem className="border-none" value={organization.id}>
             <AccordionTrigger
                 className={cn(
-                    'flex items-center gap-x-2 p-1.5 text-neutral-700 rounded-md transition text-start no-underline hover:no-underline',
+                    'flex items-center gap-x-2 rounded-md p-1.5 text-start text-neutral-700 no-underline transition hover:no-underline',
                     'hover:bg-neutral-500/10 hover:no-underline',
                     isActive && !isExpanded && 'bg-sky-500/10 text-sky-700'
                 )}
                 onClick={() => onExpand(organization.id)}
             >
                 <div className="flex items-center gap-x-2">
-                    <div className="w-7 h-7 relative">
+                    <div className="relative h-7 w-7">
                         <Image
                             alt="Organization"
                             className="rounded-sm object-cover"
@@ -76,7 +76,7 @@ const NavItem: React.FC<Props> = ({
                             src={organization.imageUrl}
                         />
                     </div>
-                    <span className="font-medium text-sm">
+                    <span className="text-sm font-medium">
                         {organization.name}
                     </span>
                 </div>
@@ -85,7 +85,7 @@ const NavItem: React.FC<Props> = ({
                 {routes.map((route) => (
                     <Button
                         className={cn(
-                            'w-full font-normal justify-start pl-10 mb-1',
+                            'mb-1 w-full justify-start pl-10 font-normal',
                             pathname === route.href &&
                                 'bg-sky-500/10 text-sky-700'
                         )}
@@ -106,8 +106,8 @@ const NavItem: React.FC<Props> = ({
 export const SkeletonNavItem = () => {
     return (
         <div className="flex items-center gap-x-2">
-            <div className="w-10 h-10 relative shrink-0">
-                <Skeleton className="h-full w-full absolute" />
+            <div className="relative h-10 w-10 shrink-0">
+                <Skeleton className="absolute h-full w-full" />
             </div>
             <Skeleton className="h-10 w-full" />
         </div>
