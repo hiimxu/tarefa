@@ -1,6 +1,7 @@
 import { Card } from '@prisma/client';
 import React from 'react';
 import { Draggable } from '@hello-pangea/dnd';
+import { useCardModal } from '~/hooks/use-card-modal';
 
 type Props = {
     data: Card;
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const CardItem = ({ data, index }: Props) => {
+    const { onOpen } = useCardModal();
+
     return (
         <Draggable draggableId={data.id} index={index}>
             {(provided) => (
@@ -15,8 +18,9 @@ const CardItem = ({ data, index }: Props) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     className="truncate rounded-md border-2 border-transparent bg-white px-3 py-2 text-sm shadow-sm hover:border-black"
+                    onClick={() => onOpen(data.id)}
                     ref={provided.innerRef}
-                    role="button"
+                    role="presentation"
                 >
                     {data.title}
                 </div>
