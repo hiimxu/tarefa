@@ -6,13 +6,13 @@ const OrganizationLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <main
             className={cn(
-                'pt-20 px-4 max-w-6xl',
+                'max-w-6xl px-4 pt-20',
                 'md:pt-24',
                 '2xl:max-w-screen-xl'
             )}
         >
             <div className="flex gap-x-7">
-                <div className={cn('w-64 shrink-0 hidden', 'md:block')}>
+                <div className={cn('hidden w-64 shrink-0', 'md:block')}>
                     <Sidebar />
                 </div>
                 {children}

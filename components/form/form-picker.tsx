@@ -43,8 +43,6 @@ export const FormPicker = ({ id, errors }: Props) => {
                     toast.error('Failed to get images from Unsplash');
                 }
             } catch (error) {
-                // eslint-disable-next-line no-console
-                console.log(error);
                 setImages(defaultImages);
             } finally {
                 setIsLoading(false);
@@ -55,20 +53,20 @@ export const FormPicker = ({ id, errors }: Props) => {
 
     if (isLoading) {
         return (
-            <div className="p-6 flex items-center justify-center">
-                <Loader2 className="h-6 w-6 text-sky-700 animate-spin" />
+            <div className="flex items-center justify-center p-6">
+                <Loader2 className="h-6 w-6 animate-spin text-sky-700" />
             </div>
         );
     }
 
     return (
         <div className="relative">
-            <div className="grid grid-cols-3 gap-2 mb-2">
+            <div className="mb-2 grid grid-cols-3 gap-2">
                 {images.map((item) => (
                     <div
                         className={cn(
-                            'cursor-pointer relative aspect-video group hover:opacity-75 transition bg-muted',
-                            pending && 'opacity-50 hover:opacity-50 cursor-auto'
+                            'group relative aspect-video cursor-pointer bg-muted transition hover:opacity-75',
+                            pending && 'cursor-auto opacity-50 hover:opacity-50'
                         )}
                         key={item.id}
                         onClick={() => {
@@ -91,19 +89,19 @@ export const FormPicker = ({ id, errors }: Props) => {
                         />
                         <Image
                             alt="Unsplash image"
-                            className="object-cover rounded-sm"
+                            className="rounded-sm object-cover"
                             fill
                             src={item.urls.thumb}
                         />
                         {selectedImageId === item.id && (
-                            <div className="absolute inset-y-0 h-full w-full bg-black/30 flex items-center justify-center">
+                            <div className="absolute inset-y-0 flex h-full w-full items-center justify-center bg-black/30">
                                 <Check className="h-4 w-4 text-white" />
                             </div>
                         )}
                         <Link
                             className={cn(
-                                'opacity-0 absolute bottom-0 w-full text-[10px] truncate text-white p-1 bg-black/10',
-                                'group-hover:opacity-100 hover:underline'
+                                'absolute bottom-0 w-full truncate bg-black/10 p-1 text-[10px] text-white opacity-0',
+                                'hover:underline group-hover:opacity-100'
                             )}
                             href={item.links.html}
                             target="_blank"

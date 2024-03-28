@@ -19,7 +19,7 @@ const Hint = ({ children, description, side, sideOffset }: Props) => {
             <Tooltip delayDuration={0}>
                 <TooltipTrigger>{children}</TooltipTrigger>
                 <TooltipContent
-                    className="text-xs max-w-[220px] break-words"
+                    className="max-w-[220px] break-words text-xs"
                     side={side}
                     sideOffset={sideOffset}
                 >

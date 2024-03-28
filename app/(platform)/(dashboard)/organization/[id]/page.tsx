@@ -6,7 +6,7 @@ import BoardList from './_components/board-list';
 
 const OrganizationPage = async () => {
     return (
-        <div className="w-full mb-20">
+        <div className="mb-20 w-full">
             <Info />
             <Separator className="my-4" />
             <div className={cn('px-2', 'md:px-4')}>

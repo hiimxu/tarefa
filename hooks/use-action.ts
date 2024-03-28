@@ -3,11 +3,11 @@ import { ActionState, FieldErrors } from '~/lib/create-safe-action';
 
 type Action<T, U> = (data: T) => Promise<ActionState<T, U>>;
 
-interface UseActionOption<T> {
+type UseActionOption<T> = {
     onSuccess?: (data: T) => void;
     onError?: (error: string) => void;
     onComplete?: () => void;
-}
+};
 
 export const useAction = <T, U>(
     action: Action<T, U>,

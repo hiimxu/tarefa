@@ -42,5 +42,5 @@ export const FormSubmit = ({
 FormSubmit.defaultProps = {
     disabled: undefined,
     className: undefined,
-    variant: undefined,
+    variant: 'primary',
 };
