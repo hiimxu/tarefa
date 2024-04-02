@@ -3,7 +3,7 @@
 
 echo '🏗️👷 testing and buidling before commit'
 
-yarn lint ||
+bun lint ||
 (
     echo '😤🏀👋😤 Oh no we got some shit here! 💩💩💩💩💩💩💩💩💩💩😤🏀👋😤
           ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
@@ -12,13 +12,13 @@ yarn lint ||
 
  echo '🤔🤔🤔🤔... Alright.... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
 
-# yarn build ||
-# (
-#     echo '❌👷🔨❌ Sorry, cannot commit... Because your build failed ❌👷🔨❌
-#           Next build failed: View the errors above to see why.
-#     '
-#     false;
-# )
+bun run build ||
+(
+    echo '❌👷🔨❌ Sorry, cannot commit... Because your build failed ❌👷🔨❌
+          Next build failed: View the errors above to see why.
+    '
+    false;
+)
 
-# If everything passes... Now we can commit
+If everything passes... Now we can commit
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
